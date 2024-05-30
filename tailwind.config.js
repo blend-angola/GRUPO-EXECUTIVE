@@ -2,10 +2,10 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -17,7 +17,16 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        rubik: "Rubik, sans-serif",
+      },
       colors: {
+        azul: {
+          dark: "#000F64",
+          light: "#0073FF",
+          light_xl: "#4D5793",
+        },
+        verde: "#14A823",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
