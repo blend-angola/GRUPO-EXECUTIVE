@@ -6,7 +6,7 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/effect-fade"
 
-const HERO_IMAGES = ["hero/hero-1.jpg", "hero/hero-2.jpg", "hero/hero-2.jpg"]
+const HERO_IMAGES = ["hero/hero-1.jpg", "hero/hero-2.jpg", "hero/hero-3.jpg"]
 
 const HeroSection = () => {
   return (
