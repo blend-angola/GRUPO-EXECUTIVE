@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const PotencialSection = () => {
   return (
     <section className="w-full mt-[100px] h-screen">
-      <Container className="flex flex-col text-azul-dark gap-8 h-full lg:h-[900px]">
+      <Container className="flex flex-col text-azul-dark gap-8 h-[700px]">
         <h1 className="text-5xl md:text-[80px] font-normal text-center lg:px-12">
           O potencial é o que fazemos dele.
         </h1>
