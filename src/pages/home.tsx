@@ -1,19 +1,14 @@
 import HeroSection from "@/components/home-components/sections/hero-section"
 import DiscoverSection from "@/components/home-components/sections/discover-section"
-import CardGridSection from "@/components/home-components/sections/card-grid-section"
-import PotencialSection from "@/components/home-components/sections/potencial-section"
 import WeBlogSection from "@/components/home-components/sections/we-blog-section"
-import TheFutureSection from "@/components/home-components/sections/the-future-section"
+
 
 const Home = () => {
   return (
     <main className="w-full flex flex-col ">
       <HeroSection />
       <DiscoverSection />
-      <CardGridSection />
-      <PotencialSection />
       <WeBlogSection />
-      <TheFutureSection />
     </main>
   )
 }

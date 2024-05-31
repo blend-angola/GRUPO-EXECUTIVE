@@ -16,7 +16,7 @@ const Header = () => {
   }
 
   return (
-    <header className="w-full bg-white fixed top-0 z-50 shadow-md">
+    <header className="w-full bg-white sticky top-0 z-50 shadow-md">
       <Container className="flex items-center h-[90px] gap-12 justify-between">
         <Link to={"/"}>
           <Logo props={{ height: 60, width: 100 }} />

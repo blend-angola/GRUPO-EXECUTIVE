@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const DiscoverSection = () => {
   return (
-    <section className="w-full mb-[100px] mt-[180px]">
+    <section className="w-full mt-[80px]">
       <Container className="flex flex-col text-azul-dark space-y-16">
         <p className="text-2xl lg:text-2xl">
           O Grupo Executivo é uma multinacional que gere um portefólio de
