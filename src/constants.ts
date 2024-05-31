@@ -1,7 +1,7 @@
 export const HEADER_LINKS = [
   {
     label: "grupo executive",
-    link: "/",
+    link: "grupo-executive/história",
     children: [
       {
         label: "história",
@@ -27,15 +27,15 @@ export const HEADER_LINKS = [
   },
   {
     label: "empresas",
-    link: "/empresas",
+    link: "empresas/bee-executive",
     children: [
       {
         label: "bee executive",
-        link: "bee-executive",
+        link: "empresas/bee-executive",
       },
       {
         label: "edicenter",
-        link: "edicenter",
+        link: "empresas/edicenter",
       },
       {
         label: "blend",
