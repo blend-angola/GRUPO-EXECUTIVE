@@ -1,5 +1,6 @@
 import WeBlogVerticalCard from "../weblog-vertical-card"
 import WeBlogHorizontalCard from "../weblog-horizontal-card"
+import { Link } from "react-router-dom"
 
 const WeBlogSection = () => {
   return (
@@ -16,6 +17,13 @@ const WeBlogSection = () => {
           <WeBlogVerticalCard />
           <WeBlogHorizontalCard reverse />
         </div>
+
+        <Link
+          to="#"
+          className="text-azul-light underline text-xl font-semibold mt-20 hover:text-azul-dark duration-200 transition-all ease-in-out"
+        >
+          Ler mais posts
+        </Link>
       </div>
     </section>
   )

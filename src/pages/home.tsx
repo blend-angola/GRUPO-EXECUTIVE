@@ -3,6 +3,7 @@ import DiscoverSection from "@/components/home-components/sections/discover-sect
 import CardGridSection from "@/components/home-components/sections/card-grid-section"
 import PotencialSection from "@/components/home-components/sections/potencial-section"
 import WeBlogSection from "@/components/home-components/sections/we-blog-section"
+import TheFutureSection from "@/components/home-components/sections/the-future-section"
 
 const Home = () => {
   return (
@@ -12,8 +13,7 @@ const Home = () => {
       <CardGridSection />
       <PotencialSection />
       <WeBlogSection />
-
-      <div className="h-screen"></div>
+      <TheFutureSection />
       <div className="h-screen"></div>
       <div className="h-screen"></div>
       <div className="h-screen"></div>
