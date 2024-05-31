@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const TheFutureSection = () => {
   return (
-    <section className="mt-[100px] w-full h-screen">
+    <section className="mt-[100px] w-full ">
       <Container className="flex flex-col items-center space-y-12">
         <div className="w-fit flex flex-col text-center">
           <h1 className="text-[60px] lg:text-[80px] text-azul-dark font-normal ">

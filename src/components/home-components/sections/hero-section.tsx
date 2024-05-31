@@ -10,7 +10,7 @@ const HERO_IMAGES = ["hero/hero-1.jpg", "hero/hero-2.jpg", "hero/hero-3.jpg"]
 
 const HeroSection = () => {
   return (
-    <section className="h-dvh md:h-screen w-full">
+    <section className="md:h-screen w-full">
       <Swiper
         className="w-full h-screen relative"
         modules={[Pagination, Autoplay, EffectFade]}

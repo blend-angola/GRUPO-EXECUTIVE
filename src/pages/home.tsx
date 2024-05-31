@@ -14,9 +14,6 @@ const Home = () => {
       <PotencialSection />
       <WeBlogSection />
       <TheFutureSection />
-      <div className="h-screen"></div>
-      <div className="h-screen"></div>
-      <div className="h-screen"></div>
     </main>
   )
 }
