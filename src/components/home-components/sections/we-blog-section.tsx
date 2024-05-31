@@ -1,6 +1,5 @@
 import WeBlogVerticalCard from "../weblog-vertical-card"
 import WeBlogHorizontalCard from "../weblog-horizontal-card"
-import { Link } from "react-router-dom"
 
 const WeBlogSection = () => {
   return (

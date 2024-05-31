@@ -1,6 +1,5 @@
 import ConferenceBlock from "@/components/conference-components/conference-block"
 import Container from "@/components/global/container"
-import { FC } from "react"
 import { Link } from "react-router-dom"
 
 const FAKE_DATA = [
