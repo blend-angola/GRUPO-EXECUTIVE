@@ -6,9 +6,9 @@ import { twMerge } from "tailwind-merge"
 
 const CardGridSection = () => {
   return (
-    <section className="h-screen w-full py-10">
+    <section className="relative lg:h-screen w-full py-10">
       <Container className="h-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center h-[82vh] lg:px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center lg:h-[82vh] lg:px-4">
           <CardBlock className="flex flex-col justify-center items-center text-azul-dark font-medium">
             <Logo props={{ height: 60 }} />
             <span className="relative right-20">AKZ</span>
@@ -52,7 +52,7 @@ const CardBlock: FC<PropsCardBlock> = ({ className, children }) => {
       initial={{ boxShadow: "0px 0px 0px 0px #fff" }}
       whileHover={{ boxShadow: "1px 1px 6px 1px #999" }}
       className={twMerge(
-        "rounded-lg w-full h-[300px] md:h-[400px] lg:h-full p-4 relative",
+        "rounded-lg w-full h-[280px] md:h-[400px] lg:h-full p-4 relative",
         className
       )}
     >

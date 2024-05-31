@@ -7,14 +7,12 @@ type Props = {
 
 const MobileMenuButton: FC<Props> = ({ handleToggle }) => {
   return (
-    <div>
-      <button
-        onClick={handleToggle}
-        className="lg:hidden flex cursor-pointer text-azul-dark z-30"
-      >
-        <AlignJustify size={32} />
-      </button>
-    </div>
+    <button
+      onClick={handleToggle}
+      className="lg:hidden flex cursor-pointer text-azul-dark z-30"
+    >
+      <AlignJustify size={32} />
+    </button>
   )
 }
 

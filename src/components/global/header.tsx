@@ -41,7 +41,7 @@ const Header = () => {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-7 text-azul-dark text-base">
+        <div className="flex items-center gap-6 text-azul-dark text-base">
           <Search />
           <button>EN</button>
           <MobileMenuButton handleToggle={handleToggle} />
