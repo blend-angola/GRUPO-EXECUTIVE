@@ -1,17 +1,23 @@
-import { FC } from "react"
+import { FC, useState } from "react"
 import { motion } from "framer-motion"
 import Container from "../global/container"
 import { HEADER_LINKS } from "@/constants"
-import { NavLink } from "react-router-dom"
 import { Plus } from "lucide-react"
 import { X } from "lucide-react"
 import { SiLinkedin } from "react-icons/si"
+import MobileCombobox from "./mobile-combobox"
 
 type Props = {
   handleToggle: () => void
 }
 
 const MobileMenu: FC<Props> = ({ handleToggle }) => {
+  const [openIndex, setOpenIndex] = useState<null | number>(null)
+
+  function handleToggleOpen(index: number) {
+    setOpenIndex((prev) => (prev === index ? null : index))
+  }
+
   return (
     <motion.div
       initial={{ height: "0px" }}
@@ -24,13 +30,20 @@ const MobileMenu: FC<Props> = ({ handleToggle }) => {
           <ul className="space-y-4">
             {HEADER_LINKS.map((link, index) => (
               <li key={index}>
-                <NavLink
-                  to={link.link}
+                <button
+                  onClick={() => handleToggleOpen(index)}
                   className="text-azul-dark capitalize text-2xl font-semibold flex items-center gap-2"
                 >
                   <Plus size={18} />
                   {link.label}
-                </NavLink>
+                </button>
+                {link.children && (
+                  <MobileCombobox
+                    index={index}
+                    links={link.children}
+                    openIndex={openIndex}
+                  />
+                )}
               </li>
             ))}
           </ul>
