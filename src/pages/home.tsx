@@ -1,6 +1,6 @@
-import CardGridSection from "@/components/home-components/sections/card-grid-section"
-import DiscoverSection from "@/components/home-components/sections/discover-section"
 import HeroSection from "@/components/home-components/sections/hero-section"
+import DiscoverSection from "@/components/home-components/sections/discover-section"
+import CardGridSection from "@/components/home-components/sections/card-grid-section"
 import PotencialSection from "@/components/home-components/sections/potencial-section"
 
 const Home = () => {
