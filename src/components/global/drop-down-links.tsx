@@ -23,7 +23,12 @@ const DropDownLinks: FC<Props> = ({ childrenLinks }) => {
       <ul className="space-y-4">
         {childrenLinks?.map((secondary_link, i) => (
           <li key={i}>
-            <Link className="text-azul-dark capitalize text-lg" to={`${secondary_link.link}`}>{secondary_link.label}</Link>
+            <Link
+              className="text-azul-dark hover:text-azul-light transition-all duration-200 capitalize text-lg"
+              to={`${secondary_link.link}`}
+            >
+              {secondary_link.label}
+            </Link>
           </li>
         ))}
       </ul>

@@ -31,8 +31,8 @@ const Header = () => {
                   to={link.link ?? "#"}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-azul-light text-lg h-full  capitalize font-semibold"
-                      : "text-azul-dark text-lg  h-full capitalize font-semibold"
+                      ? "text-azul-light text-lg h-full capitalize font-semibold"
+                      : "text-azul-dark text-lg h-full hover:text-azul-light transition-all duration-200 capitalize font-semibold"
                   }
                 >
                   {link.label}
