@@ -8,7 +8,7 @@ import GroupExecutiveLayout from "./pages/group-executive-pages/group-executive-
 import CulturePage from "./pages/group-executive-pages/culture-page.tsx"
 import PresidentMessagePage from "./pages/group-executive-pages/president-message-page.tsx"
 import ConferencePage from "./pages/conference-page/conference-page.tsx"
-import PageNotFound from "./components/global/page-not-found.tsx"
+import PageNotFound from "./components/global-components/page-not-found.tsx"
 
 const router = createBrowserRouter([
   {

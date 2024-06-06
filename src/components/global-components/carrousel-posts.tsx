@@ -1,5 +1,5 @@
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import CarouselContent from "./carousel-content"
+import { Link } from "react-router-dom"
 
 const FAKE_CONTENT = [
   {
@@ -32,31 +32,22 @@ const FAKE_CONTENT = [
 
 const CarrouselPosts = () => {
   return (
-    <section className="w-full h-full flex items-center gap-4 flex-col px-4">
-      <div className="flex items-center flex-wrap lg:flex-nowrap lg:gap-0 gap-2 w-full">
+    <section className="w-full h-full flex flex-col px-4 gap-4">
+      <div className="w-full flex items-center justify-end">
+        <Link to="#" className="text-lg font-semibold underline text-azul-dark">
+          Ver mais
+        </Link>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 w-full">
         {FAKE_CONTENT.map((content) => (
           <CarouselContent
-            date={content.date}
+            id={content.id}
             key={content.id}
+            date={content.date}
             label={content.label}
-            title={content.title}
+            title={`${content.title}: ${content.id}`}
           />
         ))}
-      </div>
-
-      <div className="w-full flex mt-2 items-center justify-between gap-8 pr-14">
-        <div className="relative w-full h-[2px] bg-zinc-400">
-          <div className="absolute h-[2px] w-[20%] bg-green-400" />
-        </div>
-
-        <div className="flex items-center gap-2">
-          <button className="text-azul-dark">
-            <ChevronLeft />
-          </button>
-          <button className="text-azul-dark">
-            <ChevronRight />
-          </button>
-        </div>
       </div>
     </section>
   )

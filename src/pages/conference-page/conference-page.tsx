@@ -1,5 +1,5 @@
 import ConferenceBlock from "@/components/conference-components/conference-block"
-import Container from "@/components/global/container"
+import Container from "@/components/global-components/container"
 import { Link } from "react-router-dom"
 
 const FAKE_DATA = [
@@ -52,14 +52,14 @@ const FAKE_DATA = [
 
 const ConferencePage = () => {
   return (
-    <section className="w-full my-[80px]">
+    <section className="w-full mt-[80px]">
       <h1 className="text-4xl text-center mb-14 md:text-5xl text-azul-dark">
         Sala de imprensa
       </h1>
 
       <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6">
         {FAKE_DATA.map((data, index) => (
-          <ConferenceBlock key={index} data={data} />
+          <ConferenceBlock index={index} key={index} data={data} />
         ))}
       </Container>
       <div className="w-full text-center mt-16">

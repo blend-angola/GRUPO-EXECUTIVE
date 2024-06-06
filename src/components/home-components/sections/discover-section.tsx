@@ -1,4 +1,4 @@
-import Container from "@/components/global/container"
+import Container from "@/components/global-components/container"
 import { Link } from "react-router-dom"
 
 const DiscoverSection = () => {

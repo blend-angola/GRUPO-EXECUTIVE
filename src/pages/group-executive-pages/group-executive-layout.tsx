@@ -1,11 +1,11 @@
-import Container from "@/components/global/container"
+import Container from "@/components/global-components/container"
 import { Outlet } from "react-router-dom"
 
 const GroupExecutiveLayout = () => {
   return (
     <main className="min-h-screen w-full">
       <Container>
-      <Outlet />
+        <Outlet />
       </Container>
     </main>
   )

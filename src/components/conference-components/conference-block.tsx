@@ -9,10 +9,25 @@ type Props = {
     title: string
     date: string
   }
+  index: number
 }
-const ConferenceBlock: FC<Props> = ({ data }) => {
+
+const conferenceBlockFadeInEffect = {
+  initial: { opacity: 0, y: -20 },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.09 * index, duration: 0.4 },
+  }),
+}
+
+const ConferenceBlock: FC<Props> = ({ index, data }) => {
   return (
     <motion.div
+      custom={index}
+      variants={conferenceBlockFadeInEffect}
+      initial="initial"
+      animate="animate"
       whileHover={{ scale: 1.02 }}
       className="rounded-xl bg-gray-100 w-full h-full lg:h-[300px] flex flex-col items-start justify-between p-8"
     >

@@ -1,8 +1,8 @@
 import { FC, useState } from "react"
 import { motion } from "framer-motion"
-import Container from "../global/container"
+import Container from "../global-components/container"
 import { HEADER_LINKS } from "@/constants"
-import { Plus } from "lucide-react"
+import { Plus, Minus } from "lucide-react"
 import { X } from "lucide-react"
 import { SiLinkedin } from "react-icons/si"
 import MobileCombobox from "./mobile-combobox"
@@ -32,11 +32,16 @@ const MobileMenu: FC<Props> = ({ handleToggle }) => {
               <li key={index}>
                 <button
                   onClick={() => handleToggleOpen(index)}
-                  className="text-azul-dark capitalize text-2xl font-semibold flex items-center gap-2"
+                  className="text-azul-dark capitalize text-2xl font-semibold flex items-center gap-2 transition-all duration-200 ease-in-out"
                 >
-                  <Plus size={18} />
+                  {openIndex === index ? (
+                    <Minus size={18} />
+                  ) : (
+                    <Plus size={18} />
+                  )}
                   {link.label}
                 </button>
+
                 {link.children && (
                   <MobileCombobox
                     index={index}

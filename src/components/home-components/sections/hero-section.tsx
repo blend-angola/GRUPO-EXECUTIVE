@@ -6,15 +6,17 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/effect-fade"
 
-const HERO_IMAGES = ["hero/hero-1.jpg", "hero/hero-2.jpg", "hero/hero-3.jpg"]
+const HERO_IMAGES = ["hero/hero-1.jpg", "hero/hero-1.jpg", "hero/hero-1.jpg"]
 
 const HeroSection = () => {
   return (
-    <section className="md:h-[70vh] w-full">
+    <section className="md:h-[75vh] w-full">
       <Swiper
-        className="w-full h-full relative"
+        className="w-full h-full"
         modules={[Pagination, Autoplay, EffectFade]}
+        spaceBetween={40}
         pagination
+        speed={2000}
         autoplay
         effect="fade"
       >
@@ -23,7 +25,7 @@ const HeroSection = () => {
             <img
               src={image}
               alt="hero-imagem-1"
-              className="absolute inset-0 w-full h-full z-30 object-cover"
+              className="w-full h-full z-30 object-cover"
             />
           </SwiperSlide>
         ))}
