@@ -53,7 +53,7 @@ const FAKE_DATA = [
 const ConferencePage = () => {
   return (
     <section className="w-full mt-[80px]">
-      <h1 className="text-4xl text-center mb-14 md:text-5xl text-azul-dark">
+      <h1 className="text-4xl text-center mb-14 md:text-5xl text-azul-light font-semibold capitalize">
         Sala de imprensa
       </h1>
 
@@ -65,9 +65,9 @@ const ConferencePage = () => {
       <div className="w-full text-center mt-16">
         <Link
           to="#"
-          className="underline font-semibold text-xl text-azul-dark uppercase"
+          className="underline font-semibold text-lg text-azul-dark uppercase"
         >
-          mais
+          ver mais
         </Link>
       </div>
     </section>

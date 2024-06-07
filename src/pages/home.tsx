@@ -4,9 +4,26 @@ import WeBlogSection from "@/components/home-components/sections/we-blog-section
 import CarrouselPosts from "@/components/global-components/carrousel-posts"
 import { motion } from "framer-motion"
 
+const enterEffectVariant = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+    },
+  },
+}
+
 const Home = () => {
   return (
-    <motion.main className="w-full flex flex-col ">
+    <motion.main
+      initial="initial"
+      animate="animate"
+      variants={enterEffectVariant}
+      className="w-full flex flex-col "
+    >
       <HeroSection />
       <DiscoverSection />
       <WeBlogSection />

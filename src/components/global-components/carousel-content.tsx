@@ -34,7 +34,7 @@ const CarouselContent: FC<Props> = ({ label, date, title, id }) => {
       variants={carouselEffect}
       viewport={{ amount: "all", once: true }}
       whileHover={{ backgroundColor: "#f5f5f5", scale: 1.02 }}
-      className="w-full h-[250px] py-8 flex flex-col gap-8 font-medium px-4 bg-white"
+      className="w-full h-[250px] py-8 flex flex-col gap-8 rounded-xl font-medium px-4 bg-white"
     >
       <div className="w-full flex items-center text-sm uppercase justify-between text-zinc-400 ">
         <h2>{label}</h2>
