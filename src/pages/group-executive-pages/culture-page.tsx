@@ -37,12 +37,11 @@ const CulturePage = () => {
       animate="animate"
       variants={culturePageEffect}
     >
-      <Container className="w-full text-azul-dark flex items-center h-full justify-center my-[80px] flex-col gap-12 capitalize text-xl text-center font-normal">
+      <div className="w-full flex flex-col gap-4 items-center justify-center mt-12">
         <h1 className="text-5xl text-azul-light font-semibold mb-6 capitalize">
           cultura executive
         </h1>
-
-        <section className="bg-[url('/culture.jpg')] w-full h-[90vh] rounded-xl bg-center bg-cover flex items-center flex-col text-white justify-center gap-4 p-4">
+        <section className="bg-[url('/culture.jpg')] w-full md:w-[90vw] h-[90vh] rounded-xl bg-center bg-cover flex items-center flex-col text-white justify-center gap-4 p-4">
           <h1 className="font-bold text-3xl mb-6">
             Lorem ipsum dolor sit amet consectetur
           </h1>
@@ -56,7 +55,9 @@ const CulturePage = () => {
             </p>
           ))}
         </section>
+      </div>
 
+      <Container className="w-full text-azul-dark flex items-center h-full justify-center my-[80px] flex-col gap-12 capitalize text-xl text-center font-normal">
         <section className="flex flex-col gap-4">
           <h1 className="text-2xl text-azul-light font-semibold">
             A nossa missão

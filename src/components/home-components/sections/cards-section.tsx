@@ -1,6 +1,6 @@
-import WeBlogVerticalCard from "../weblog-vertical-card"
-import WeBlogHorizontalCard from "../weblog-horizontal-card"
 import { motion } from "framer-motion"
+import VerticalCard from "../vertical-card"
+import HorizontalCard from "../horizontal-card"
 
 const whileInViewAnimation = {
   initial: { opacity: 0, y: 40 },
@@ -14,7 +14,7 @@ const whileInViewAnimation = {
   },
 }
 
-const WeBlogSection = () => {
+const CardsSection = () => {
   return (
     <motion.section
       variants={whileInViewAnimation}
@@ -25,14 +25,14 @@ const WeBlogSection = () => {
     >
       <div className="w-full flex flex-col items-center justify-center">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 h-full">
-          <WeBlogVerticalCard />
-          <WeBlogHorizontalCard reverse />
-          <WeBlogVerticalCard />
-          <WeBlogHorizontalCard reverse />
+          <VerticalCard reverse={false} />
+          <HorizontalCard reverse />
+          <VerticalCard reverse />
+          <HorizontalCard />
         </div>
       </div>
     </motion.section>
   )
 }
 
-export default WeBlogSection
+export default CardsSection

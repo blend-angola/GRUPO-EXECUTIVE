@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const WeBlogHorizontalCard = ({ reverse }: { reverse?: boolean }) => {
+const HorizontalCard = ({ reverse }: { reverse?: boolean }) => {
   return (
     <div
       className={`relative ${
@@ -45,4 +45,4 @@ const WeBlogHorizontalCard = ({ reverse }: { reverse?: boolean }) => {
   )
 }
 
-export default WeBlogHorizontalCard
+export default HorizontalCard

@@ -1,7 +1,7 @@
 import Container from "@/components/global-components/container"
 import { Link } from "react-router-dom"
 
-const DiscoverSection = () => {
+const IntroSection = () => {
   return (
     <section className="w-full mt-[80px]">
       <Container className="flex flex-col text-azul-dark space-y-16">
@@ -30,4 +30,4 @@ const DiscoverSection = () => {
   )
 }
 
-export default DiscoverSection
+export default IntroSection

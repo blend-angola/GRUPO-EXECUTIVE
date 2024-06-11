@@ -1,8 +1,8 @@
-import HeroSection from "@/components/home-components/sections/hero-section"
-import DiscoverSection from "@/components/home-components/sections/discover-section"
-import WeBlogSection from "@/components/home-components/sections/we-blog-section"
-import CarrouselPosts from "@/components/global-components/carrousel-posts"
 import { motion } from "framer-motion"
+import HeroSection from "@/components/home-components/sections/hero-section"
+import CardsSection from "@/components/home-components/sections/cards-section"
+import IntroSection from "@/components/home-components/sections/intro-section"
+import RecentConferencePostWrapper from "@/components/global-components/recent-conference-post-wrapper"
 
 const enterEffectVariant = {
   initial: {
@@ -25,9 +25,9 @@ const Home = () => {
       className="w-full flex flex-col "
     >
       <HeroSection />
-      <DiscoverSection />
-      <WeBlogSection />
-      <CarrouselPosts />
+      <IntroSection />
+      <CardsSection />
+      <RecentConferencePostWrapper />
     </motion.main>
   )
 }

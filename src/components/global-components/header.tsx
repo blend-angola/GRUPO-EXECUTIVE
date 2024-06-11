@@ -1,6 +1,6 @@
 import { HEADER_LINKS } from "@/constants"
 import Container from "./container"
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { Search } from "lucide-react"
 import MobileMenuButton from "../mobile/mobile-menu-button"
 import { useState } from "react"
@@ -8,8 +8,6 @@ import { AnimatePresence, motion } from "framer-motion"
 import MobileMenu from "../mobile/mobile-menu"
 import Logo from "../logo"
 import DropDownLinks from "./drop-down-links"
-
-const LinkMotion = motion(Link)
 
 export const enterEffect = {
   initial: { y: -30, opacity: 0 },
@@ -33,14 +31,7 @@ const Header = () => {
   return (
     <header className="w-full bg-white sticky top-0 z-50 shadow-md">
       <Container className="flex items-center h-[80px] gap-12 justify-between">
-        <LinkMotion
-          variants={enterEffect}
-          initial="initial"
-          animate="animate"
-          to={"/"}
-        >
-          <Logo props={{ height: 60, width: 140 }} />
-        </LinkMotion>
+        <Logo />
 
         <motion.nav
           variants={enterEffect}
@@ -55,8 +46,8 @@ const Header = () => {
                   to={link.link ?? "#"}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-azul-light text-lg h-full capitalize font-medium"
-                      : "text-azul-dark text-lg h-full hover:text-azul-light transition-all duration-200 capitalize font-medium"
+                      ? "text-azul-light text-base h-full capitalize font-medium"
+                      : "text-azul-dark text-base h-full hover:text-azul-light transition-all duration-200 capitalize font-medium"
                   }
                 >
                   {link.label}

@@ -84,8 +84,13 @@ const FooterContentWrapper = () => {
       <FooterContent contents={["account", "log in"]} />
       <FooterContent contents={["about", "why group executive"]} />
 
-      <FooterContent socialMedias contents={["more grupo executive", "grupo executive today","adver on grupo executive",
-       ]}
+      <FooterContent
+        socialMedias
+        contents={[
+          "more grupo executive",
+          "grupo executive today",
+          "adver on grupo executive",
+        ]}
       />
     </Container>
   )

@@ -16,13 +16,19 @@ const FooterContent: FC<Props> = ({ contents, socialMedias }) => {
       {socialMedias && (
         <ul className="flex justify-between text-3xl mt-2 items-center ">
           <li>
-            <SiFacebook />
+            <a href="https://facebook.com" target="_blank">
+              <SiFacebook />
+            </a>
           </li>
           <li>
-            <SiTwitter />
+            <a href="https://x.com" target="_blank">
+              <SiTwitter />
+            </a>
           </li>
           <li>
-            <SiYoutube />
+            <a href="https://youtube.com" target="_blank">
+              <SiYoutube />
+            </a>
           </li>
         </ul>
       )}

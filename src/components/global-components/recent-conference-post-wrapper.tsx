@@ -1,4 +1,4 @@
-import CarouselContent from "./carousel-content"
+import CarouselContent from "./recent-conference-post"
 import { Link } from "react-router-dom"
 
 const FAKE_CONTENT = [
@@ -30,11 +30,15 @@ const FAKE_CONTENT = [
   },
 ]
 
-const CarrouselPosts = () => {
+const RecentConferencePostWrapper = () => {
   return (
     <section className="w-full h-full flex flex-col px-4 gap-4">
       <div className="w-full flex items-center justify-end">
-        <Link to="#" className="text-lg font-semibold underline text-azul-dark">
+        <Link
+          reloadDocument
+          to="/sala-de-imprensa"
+          className="text-lg font-semibold underline text-azul-dark"
+        >
           Ver mais
         </Link>
       </div>
@@ -53,4 +57,4 @@ const CarrouselPosts = () => {
   )
 }
 
-export default CarrouselPosts
+export default RecentConferencePostWrapper

@@ -24,7 +24,7 @@ const carouselEffect = {
   }),
 }
 
-const CarouselContent: FC<Props> = ({ label, date, title, id }) => {
+const RecentConferencePost: FC<Props> = ({ label, date, title, id }) => {
   return (
     <LinkMotion
       to="#"
@@ -47,4 +47,4 @@ const CarouselContent: FC<Props> = ({ label, date, title, id }) => {
   )
 }
 
-export default CarouselContent
+export default RecentConferencePost
