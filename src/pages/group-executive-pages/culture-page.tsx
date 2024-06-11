@@ -37,12 +37,12 @@ const CulturePage = () => {
       animate="animate"
       variants={culturePageEffect}
     >
-      <div className="w-full flex flex-col gap-4 items-center justify-center mt-12">
-        <h1 className="text-5xl text-azul-light font-semibold mb-6 capitalize">
+      <div className="w-full flex flex-col gap-4 items-center justify-center mt-[80px]">
+        <h1 className="text-4xl md:text-5xl text-azul-light text-center font-semibold mb-6 capitalize">
           cultura executive
         </h1>
-        <section className="bg-[url('/culture.jpg')] w-full md:w-[90vw] h-[90vh] rounded-xl bg-center bg-cover flex items-center flex-col text-white justify-center gap-4 p-4">
-          <h1 className="font-bold text-3xl mb-6">
+        <section className="bg-[url('/culture.jpg')] w-full md:w-[90vw] h-[60vh] md:h-[90vh] rounded-xl bg-center bg-cover flex items-center flex-col text-white justify-center gap-4 p-4">
+          <h1 className="font-bold text-xl md:text-3xl mb-6">
             Lorem ipsum dolor sit amet consectetur
           </h1>
           {Array.from({ length: 2 }).map((_, index) => (
@@ -62,7 +62,7 @@ const CulturePage = () => {
           <h1 className="text-2xl text-azul-light font-semibold">
             A nossa missão
           </h1>
-          <p>
+          <p className="text-center ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit rerum
             error atque officiis consectetur tempore nihil minima eaque,
             accusamus optio iure temporibus quaerat expedita, quibusdam officia
@@ -70,7 +70,7 @@ const CulturePage = () => {
           </p>
         </section>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-12 gap-16">
+        <section className="grid grid-cols-1 md:grid-cols-2 place-items-center md:place-items-start lg:grid-cols-3 my-12 gap-16">
           {Array.from({ length: 5 }).map((_, i) => (
             <motion.div
               variants={gridEffectVariant}
@@ -79,7 +79,7 @@ const CulturePage = () => {
               viewport={{ once: true, margin: "-100px" }}
               custom={i}
               key={i}
-              className="flex flex-col text-start gap-2"
+              className="flex flex-col text-center md:text-start gap-2"
             >
               <h1 className="text-xl text-azul-light font-semibold">
                 A nossa missão

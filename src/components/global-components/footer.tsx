@@ -15,7 +15,7 @@ const Hover: FC<HoverProps> = ({ enter, leave, className }) => {
   return (
     <motion.div
       className={twMerge(
-        "mx-auto mb-2 p-2 text-white bg-neutral-700 -top-12 z-20 size-12 flex items-center justify-center rounded-full",
+        "mx-auto mb-2 p-2 text-white bg-neutral-700 -top-12 z-20 size-12 hidden lg:flex items-center justify-center rounded-full",
         className
       )}
       onMouseEnter={enter}
@@ -41,7 +41,7 @@ const Footer = () => {
     <footer className="relative h-20 w-full justify-center mt-[100px] flex flex-col text-white">
       <Hover enter={handleMouseEnter} leave={handleMouseLeave} />
 
-      <section className="relative flex flex-col items-center z-50 bg-neutral-900 w-full">
+      <section className="relative hidden lg:flex flex-col items-center z-50 bg-neutral-900 w-full">
         <motion.div
           initial={{ height: 0 }}
           onMouseEnter={handleMouseEnter}

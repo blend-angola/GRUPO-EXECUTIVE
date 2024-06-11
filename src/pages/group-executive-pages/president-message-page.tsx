@@ -28,7 +28,7 @@ const PresidentMessagePage = () => {
         <h1 className="text-4xl text-azul-light font-semibold md:text-5xl mb-6 capitalize">
           Mensagem do presidente
         </h1>
-        <p className="text-2xl">
+        <p className="text-xl md:text-2xl">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
           accusamus exercitationem dolorum rerum, quibusdam aliquam dignissimos
           error excepturi omnis perferendis.

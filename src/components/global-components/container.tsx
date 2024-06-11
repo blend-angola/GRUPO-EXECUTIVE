@@ -12,7 +12,7 @@ const Container: FC<Props> = ({ children, className, ...rest }) => {
     <div
       {...rest}
       className={twMerge(
-        "lg:px-0 px-6 w-full lg:w-[1200px] mx-auto",
+        "lg:px-0 px-4 w-full lg:w-[1200px] mx-auto",
         className
       )}
     >

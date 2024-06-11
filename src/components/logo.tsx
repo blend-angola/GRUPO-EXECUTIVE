@@ -11,9 +11,13 @@ const Logo = () => {
       initial="initial"
       animate="animate"
       to={"/"}
-      className="relative w-[250px] h-full"
+      className="relative w-full h-full md:w-[370px] md:h-[45px]"
     >
-      <img src="logotipo.png" alt="logotipo" className="object-contain absolute w-full inset-0 h-full" />
+      <img
+        src="/logotipo.png"
+        alt="logotipo"
+        className="object-contain md:object-cover z-20 absolute w-full inset-0 h-full"
+      />
     </LinkMotion>
   )
 }

@@ -1,4 +1,4 @@
-import CarouselContent from "./recent-conference-post"
+import RecentConferencePost from "./recent-conference-post"
 import { Link } from "react-router-dom"
 
 const FAKE_CONTENT = [
@@ -32,7 +32,7 @@ const FAKE_CONTENT = [
 
 const RecentConferencePostWrapper = () => {
   return (
-    <section className="w-full h-full flex flex-col px-4 gap-4">
+    <section className="w-full h-full flex flex-col px-8 gap-4">
       <div className="w-full flex items-center justify-end">
         <Link
           reloadDocument
@@ -44,7 +44,7 @@ const RecentConferencePostWrapper = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 w-full">
         {FAKE_CONTENT.map((content) => (
-          <CarouselContent
+          <RecentConferencePost
             id={content.id}
             key={content.id}
             date={content.date}

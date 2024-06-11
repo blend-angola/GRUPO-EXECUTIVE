@@ -6,6 +6,7 @@ import { Plus, Minus } from "lucide-react"
 import { X } from "lucide-react"
 import { SiLinkedin } from "react-icons/si"
 import MobileCombobox from "./mobile-combobox"
+import { Link } from "react-router-dom"
 
 type Props = {
   handleToggle: () => void
@@ -30,17 +31,28 @@ const MobileMenu: FC<Props> = ({ handleToggle }) => {
           <ul className="space-y-4">
             {HEADER_LINKS.map((link, index) => (
               <li key={index}>
-                <button
-                  onClick={() => handleToggleOpen(index)}
-                  className="text-azul-dark capitalize text-2xl font-semibold flex items-center gap-2 transition-all duration-200 ease-in-out"
-                >
-                  {openIndex === index ? (
-                    <Minus size={18} />
-                  ) : (
-                    <Plus size={18} />
-                  )}
-                  {link.label}
-                </button>
+                {link.children ? (
+                  <button
+                    onClick={() => handleToggleOpen(index)}
+                    className="text-azul-dark capitalize text-2xl font-semibold flex items-center gap-2 transition-all duration-200 ease-in-out"
+                  >
+                    {openIndex === index ? (
+                      <Minus size={18} />
+                    ) : (
+                      <Plus size={18} />
+                    )}
+
+                    {link.label}
+                  </button>
+                ) : (
+                  <Link
+                    reloadDocument
+                    className="text-azul-dark capitalize text-2xl font-semibold flex items-center gap-2 transition-all duration-200 ease-in-out"
+                    to={`${link.link}`}
+                  >
+                    {link.label}
+                  </Link>
+                )}
 
                 {link.children && (
                   <MobileCombobox

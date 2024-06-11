@@ -27,7 +27,7 @@ const MobileCombobox: FC<Props> = ({ index, openIndex, links }) => {
               key={index}
               to={link.link}
               reloadDocument
-              className="text-azul-light_xl capitalize text-base"
+              className="text-azul-light_xl font-normal capitalize text-xl"
             >
               {link.label}
             </Link>

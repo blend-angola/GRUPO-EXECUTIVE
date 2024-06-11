@@ -10,14 +10,14 @@ const HERO_IMAGES = ["hero/hero-1.jpg", "hero/hero-3.jpg", "hero/hero-5.jpg"]
 
 const HeroSection = () => {
   return (
-    <section className="md:h-[75vh] w-full">
+    <section className="md:h-[75vh] h-[50vh] w-full">
       <Swiper
         autoplay
         pagination
         effect="fade"
-        spaceBetween={40}
+        spaceBetween={20}
         slidesPerView={1}
-        className="w-full h-full"
+        className="w-full bg h-full"
         modules={[Pagination, Autoplay, EffectFade]}
       >
         {HERO_IMAGES.map((image, i) => (
@@ -25,7 +25,7 @@ const HeroSection = () => {
             <img
               src={image}
               alt="hero-imagem-1"
-              className="w-full h-full z-30 object-cover"
+              className="w-full h-full object-cover"
             />
           </SwiperSlide>
         ))}
