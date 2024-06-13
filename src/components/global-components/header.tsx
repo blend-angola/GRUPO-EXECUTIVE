@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import MobileMenu from "../mobile/mobile-menu"
 import Logo from "../logo"
 import DropDownLinks from "./drop-down-links"
-import Search from "./search"
+import SearchButton from "./search-button"
 
 export const enterEffect = {
   initial: { y: -30, opacity: 0 },
@@ -67,7 +67,7 @@ const Header = () => {
           animate="animate"
           className="flex items-center gap-6 text-azul-dark text-base"
         >
-          <Search />
+          <SearchButton />
 
           <button>EN</button>
           <MobileMenuButton handleToggle={handleToggle} />
