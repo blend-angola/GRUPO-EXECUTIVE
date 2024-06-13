@@ -1,13 +1,13 @@
 import { HEADER_LINKS } from "@/constants"
 import Container from "./container"
 import { NavLink } from "react-router-dom"
-import { Search } from "lucide-react"
 import MobileMenuButton from "../mobile/mobile-menu-button"
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import MobileMenu from "../mobile/mobile-menu"
 import Logo from "../logo"
 import DropDownLinks from "./drop-down-links"
+import Search from "./search"
 
 export const enterEffect = {
   initial: { y: -30, opacity: 0 },
@@ -29,7 +29,7 @@ const Header = () => {
   }
 
   return (
-    <header className="w-full bg-white sticky top-0 z-50 shadow-md">
+    <header className="w-full bg-white sticky top-0 z-50 border-b">
       <Container className="flex items-center h-[80px] gap-12 justify-between">
         <Logo />
 
@@ -68,6 +68,7 @@ const Header = () => {
           className="flex items-center gap-6 text-azul-dark text-base"
         >
           <Search />
+
           <button>EN</button>
           <MobileMenuButton handleToggle={handleToggle} />
         </motion.div>

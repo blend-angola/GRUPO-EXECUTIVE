@@ -9,6 +9,7 @@ import CulturePage from "./pages/group-executive-pages/culture-page.tsx"
 import PresidentMessagePage from "./pages/group-executive-pages/president-message-page.tsx"
 import ConferencePage from "./pages/conference-page/conference-page.tsx"
 import PageNotFound from "./components/global-components/page-not-found.tsx"
+import SearchResultPage from "./pages/search-result-page/search-result-page.tsx"
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "sala-de-imprensa",
         element: <ConferencePage />,
+      },
+      {
+        path: "resultado",
+        element: <SearchResultPage />,
       },
       {
         path: "*",

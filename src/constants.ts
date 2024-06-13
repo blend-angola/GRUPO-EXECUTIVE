@@ -39,7 +39,7 @@ export const HEADER_LINKS = [
       },
       {
         label: "blend",
-        link: "blend",
+        link: "empresas/blend",
       },
     ],
   },
