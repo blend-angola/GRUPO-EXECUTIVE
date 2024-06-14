@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { Search as SearchIcon } from "lucide-react"
 import SearchInput from "./search-input"
+import { Search as SearchIcon } from "lucide-react"
 
 const SearchButton = () => {
   const [isOpen, setIsOpen] = useState(false)

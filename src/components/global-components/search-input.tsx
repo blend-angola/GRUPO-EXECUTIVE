@@ -24,7 +24,7 @@ const SearchInput: FC<Props> = ({ isOpen, toggleSearch }) => {
     navigate(`/resultado?pesquisa=${searchResult}`)
     toggleSearch()
   }
-  
+
   return (
     <AnimatePresence mode="wait">
       {isOpen && (

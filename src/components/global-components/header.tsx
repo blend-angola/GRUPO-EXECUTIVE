@@ -1,13 +1,13 @@
-import { HEADER_LINKS } from "@/constants"
-import Container from "./container"
-import { NavLink } from "react-router-dom"
-import MobileMenuButton from "../mobile/mobile-menu-button"
-import { useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
-import MobileMenu from "../mobile/mobile-menu"
 import Logo from "../logo"
-import DropDownLinks from "./drop-down-links"
+import { useState } from "react"
+import Container from "./container"
 import SearchButton from "./search-button"
+import { NavLink } from "react-router-dom"
+import { HEADER_LINKS } from "@/constants"
+import DropDownLinks from "./drop-down-links"
+import MobileMenu from "../mobile/mobile-menu"
+import { AnimatePresence, motion } from "framer-motion"
+import MobileMenuButton from "../mobile/mobile-menu-button"
 
 export const enterEffect = {
   initial: { y: -30, opacity: 0 },

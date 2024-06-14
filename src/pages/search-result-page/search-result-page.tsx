@@ -17,11 +17,11 @@ const SearchResultPage = () => {
           </span>
         </section>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {Array.from({ length: 14 }).map((_, i) => (
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          {Array.from({ length: 10 }).map((_, i) => (
             <div
               key={i}
-              className="p-4 rounded-xl w-full bg-zinc-100 space-y-2"
+              className="p-4 rounded-xl h-48 w-full bg-zinc-100 space-y-2"
             >
               <h2 className="text-xl text-azul-dark font-medium">
                 {decodedSearchResult}

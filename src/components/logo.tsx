@@ -11,7 +11,7 @@ const Logo = () => {
       initial="initial"
       animate="animate"
       to={"/"}
-      className="relative w-full h-full md:w-[370px] md:h-[45px]"
+      className="relative w-48 h-full md:w-[370px] md:h-[45px]"
     >
       <img
         src="/logotipo.png"
