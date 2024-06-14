@@ -1,17 +1,24 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { enterEffect } from "./global-components/header"
+import { FC } from "react"
 
 const LinkMotion = motion(Link)
 
-const Logo = () => {
+type Props = {
+  resize: boolean
+}
+
+const Logo: FC<Props> = ({ resize }) => {
   return (
     <LinkMotion
       variants={enterEffect}
       initial="initial"
       animate="animate"
       to={"/"}
-      className="relative w-48 h-full md:w-[370px] md:h-[45px]"
+      className={`relative w-48 h-full ${
+        resize ? "md:w-[300px] md:h-[30px]" : "md:w-[370px] md:h-[45px]"
+      }  transition-all duration-200 ease-in-out`}
     >
       <img
         src="/logotipo.png"

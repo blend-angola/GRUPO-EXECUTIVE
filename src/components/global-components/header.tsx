@@ -1,5 +1,5 @@
 import Logo from "../logo"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Container from "./container"
 import SearchButton from "./search-button"
 import { NavLink } from "react-router-dom"
@@ -23,15 +23,29 @@ export const enterEffect = {
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [resizeLogo, setResizeLogo] = useState(false)
 
   function handleToggle() {
     setIsOpen((prev) => !prev)
   }
 
+  useEffect(() => {
+    function handleResizeLogo() {
+      if (window.scrollY > 200) {
+        setResizeLogo(true)
+      } else {
+        setResizeLogo(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleResizeLogo)
+    return () => window.removeEventListener("scroll", handleResizeLogo)
+  }, [window.scrollY])
+
   return (
     <header className="w-full bg-white sticky top-0 z-50 border-b">
       <Container className="flex items-center h-[80px] gap-12 justify-between">
-        <Logo />
+        <Logo resize={resizeLogo} />
 
         <motion.nav
           variants={enterEffect}
