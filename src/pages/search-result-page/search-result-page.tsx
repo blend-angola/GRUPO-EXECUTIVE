@@ -1,4 +1,5 @@
 import Container from "@/components/global-components/container"
+import Pagination from "@/components/global-components/pagination/pagination"
 import { useLocation } from "react-router-dom"
 
 const SearchResultPage = () => {
@@ -32,6 +33,7 @@ const SearchResultPage = () => {
             </div>
           ))}
         </section>
+        <Pagination />
       </Container>
     </main>
   )

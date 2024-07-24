@@ -3,11 +3,13 @@ import { useEffect, useState } from "react"
 import Container from "./container"
 import SearchButton from "./search-button"
 import { NavLink } from "react-router-dom"
-import { HEADER_LINKS } from "@/constants"
+// import { HEADER_LINKS } from "@/constants"
 import DropDownLinks from "./drop-down-links"
 import MobileMenu from "../mobile/mobile-menu"
 import { AnimatePresence, motion } from "framer-motion"
 import MobileMenuButton from "../mobile/mobile-menu-button"
+import LanguageSelector from "./language-selector"
+import { useTranslation } from "react-i18next"
 
 export const enterEffect = {
   initial: { y: -30, opacity: 0 },
@@ -21,12 +23,27 @@ export const enterEffect = {
   },
 }
 
+export type HeaderProps = {
+  label: string
+  link: string
+  children?: { label: string; link: string }[]
+}
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [resizeLogo, setResizeLogo] = useState(false)
+  const { t } = useTranslation("common")
+
+  const headerArr: HeaderProps[] = t("header") as any
 
   function handleToggle() {
     setIsOpen((prev) => !prev)
+  }
+
+  if (isOpen) {
+    window.document.body.style.overflow = "hidden"
+  } else {
+    window.document.body.style.overflow = "auto"
   }
 
   useEffect(() => {
@@ -53,8 +70,8 @@ const Header = () => {
           animate="animate"
           className="w-full hidden lg:block"
         >
-          <ul className="flex items-center gap-5 w-full">
-            {HEADER_LINKS.map((link, index) => (
+          <ul className="flex items-center gap-4 w-full">
+            {headerArr.map((link, index) => (
               <li key={index} className="relative group py-8">
                 <NavLink
                   to={link.link ?? "#"}
@@ -83,7 +100,7 @@ const Header = () => {
         >
           <SearchButton />
 
-          <button>EN</button>
+          <LanguageSelector />
           <MobileMenuButton handleToggle={handleToggle} />
         </motion.div>
       </Container>

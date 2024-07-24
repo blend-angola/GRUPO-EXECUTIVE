@@ -4,8 +4,8 @@ import { ArrowLeft } from "lucide-react"
 
 const PageNotFound = () => {
   return (
-    <section className="w-full h-[50vh] flex items-center justify-center">
-      <Container className="flex flex-col  items-center justify-center gap-4">
+    <section className={`w-full h-[100vh] flex items-center justify-center`}>
+      <Container className="flex flex-col items-center justify-center gap-4">
         <h1 className="text-4xl text-azul-dark font-medium">
           {" "}
           404 Página não encontrada

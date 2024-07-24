@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 
 type Props = {
+  handleToggle: () => void
   openIndex: number | null
   index: number
   links:
@@ -13,7 +14,7 @@ type Props = {
     | undefined
 }
 
-const MobileCombobox: FC<Props> = ({ index, openIndex, links }) => {
+const MobileCombobox: FC<Props> = ({ index, openIndex, links,handleToggle }) => {
   return (
     <div>
       {openIndex === index && (
@@ -26,7 +27,7 @@ const MobileCombobox: FC<Props> = ({ index, openIndex, links }) => {
             <Link
               key={index}
               to={link.link}
-              reloadDocument
+              onClick={handleToggle}
               className="text-azul-light_xl font-normal capitalize text-xl"
             >
               {link.label}

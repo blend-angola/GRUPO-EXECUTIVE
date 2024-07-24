@@ -1,54 +1,7 @@
-import ConferenceBlock from "@/components/conference-components/conference-block"
+import { CONFERENCE_PAGE_DATA } from "@/data"
 import Container from "@/components/global-components/container"
-import { Link } from "react-router-dom"
-
-const FAKE_DATA = [
-  {
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta",
-    date: "28 de Maio de 2024",
-  },
-  {
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta",
-    date: "28 de Maio de 2024",
-  },
-  {
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta",
-    date: "28 de Maio de 2024",
-  },
-  {
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta",
-    date: "28 de Maio de 2024",
-  },
-  {
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta",
-    date: "28 de Maio de 2024",
-  },
-  {
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta",
-    date: "28 de Maio de 2024",
-  },
-  {
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta",
-    date: "28 de Maio de 2024",
-  },
-  {
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta",
-    date: "28 de Maio de 2024",
-  },
-  {
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, soluta",
-    date: "28 de Maio de 2024",
-  },
-]
+import Pagination from "@/components/global-components/pagination/pagination"
+import ConferenceBlock from "@/components/conference-components/conference-block"
 
 const ConferencePage = () => {
   return (
@@ -58,18 +11,12 @@ const ConferencePage = () => {
       </h1>
 
       <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6">
-        {FAKE_DATA.map((data, index) => (
+        {CONFERENCE_PAGE_DATA.map((data, index) => (
           <ConferenceBlock index={index} key={index} data={data} />
         ))}
       </Container>
-      <div className="w-full text-center mt-16">
-        <Link
-          to="#"
-          className="underline font-semibold text-lg text-azul-dark uppercase"
-        >
-          ver mais
-        </Link>
-      </div>
+
+      <Pagination />
     </section>
   )
 }

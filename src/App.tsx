@@ -4,11 +4,9 @@ import Header from "./components/global-components/header"
 
 function App() {
   return (
-    <section className="font-rubik flex flex-col h-full">
+    <section className="font-rubik flex flex-col">
       <Header />
-      <main className="w-full h-auto">
-        <Outlet />
-      </main>
+      <Outlet />
       <Footer />
     </section>
   )

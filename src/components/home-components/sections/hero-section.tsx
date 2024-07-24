@@ -6,7 +6,7 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/effect-fade"
 
-const HERO_IMAGES = ["hero/hero-1.jpg", "hero/hero-3.jpg", "hero/hero-5.jpg"]
+const HERO_IMAGES = ["hero/hero-1.jpg", "hero/hero-2.jpg"]
 
 const HeroSection = () => {
   return (
@@ -24,7 +24,7 @@ const HeroSection = () => {
           <SwiperSlide key={i}>
             <img
               src={image}
-              alt="hero-imagem-1"
+              alt="hero-image"
               className="w-full h-full object-cover"
             />
           </SwiperSlide>

@@ -17,7 +17,7 @@ const Logo: FC<Props> = ({ resize }) => {
       animate="animate"
       to={"/"}
       className={`relative w-48 h-full ${
-        resize ? "md:w-[300px] md:h-[30px]" : "md:w-[370px] md:h-[45px]"
+        resize ? "md:w-[300px] md:h-[30px]" : "md:w-[400px] md:h-[45px]"
       }  transition-all duration-200 ease-in-out`}
     >
       <img

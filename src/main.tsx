@@ -1,15 +1,19 @@
 import React from "react"
-import ReactDOM from "react-dom/client"
 import App from "./App.tsx"
-import "./index.css"
-import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import ReactDOM from "react-dom/client"
+
 import Home from "./pages/home.tsx"
-import GroupExecutiveLayout from "./pages/group-executive-pages/group-executive-layout.tsx"
 import CulturePage from "./pages/group-executive-pages/culture-page.tsx"
-import PresidentMessagePage from "./pages/group-executive-pages/president-message-page.tsx"
 import ConferencePage from "./pages/conference-page/conference-page.tsx"
 import PageNotFound from "./components/global-components/page-not-found.tsx"
 import SearchResultPage from "./pages/search-result-page/search-result-page.tsx"
+import GroupExecutiveLayout from "./pages/group-executive-pages/group-executive-layout.tsx"
+import PresidentMessagePage from "./pages/group-executive-pages/president-message-page.tsx"
+
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
+
+import "./index.css"
+import "./utils/i18next/index.ts"
 
 const router = createBrowserRouter([
   {

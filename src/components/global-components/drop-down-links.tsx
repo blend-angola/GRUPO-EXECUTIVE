@@ -4,12 +4,10 @@ import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 
 type Props = {
-  childrenLinks:
-    | {
-        label: string
-        link: string
-      }[]
-    | undefined
+  childrenLinks: {
+    label: string
+    link: string
+  }[] | undefined
 }
 
 const DropDownLinks: FC<Props> = ({ childrenLinks }) => {
