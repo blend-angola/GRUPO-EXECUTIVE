@@ -40,12 +40,6 @@ const Header = () => {
     setIsOpen((prev) => !prev)
   }
 
-  if (isOpen) {
-    window.document.body.style.overflow = "hidden"
-  } else {
-    window.document.body.style.overflow = "auto"
-  }
-
   useEffect(() => {
     function handleResizeLogo() {
       if (window.scrollY > 200) {
@@ -58,6 +52,14 @@ const Header = () => {
     window.addEventListener("scroll", handleResizeLogo)
     return () => window.removeEventListener("scroll", handleResizeLogo)
   }, [window.scrollY])
+
+  useEffect(() => {
+    if (isOpen) {
+      window.document.body.style.overflow = "hidden"
+    } else {
+      window.document.body.style.overflow = "auto"
+    }
+  }, [isOpen])
 
   return (
     <header className="w-full bg-white sticky top-0 z-50 border-b">

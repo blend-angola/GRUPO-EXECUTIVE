@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import SearchInput from "./search-input"
 import { Search as SearchIcon } from "lucide-react"
 
@@ -9,11 +9,13 @@ const SearchButton = () => {
     setIsOpen((prev) => !prev)
   }
 
-  if (isOpen) {
-    document.body.style.overflow = "hidden"
-  } else {
-    document.body.style.overflow = "auto"
-  }
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
+    }
+  }, [isOpen])
 
   return (
     <>

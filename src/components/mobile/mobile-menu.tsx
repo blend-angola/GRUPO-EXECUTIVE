@@ -1,7 +1,6 @@
 import { FC, useState } from "react"
 import { motion } from "framer-motion"
 import Container from "../global-components/container"
-import { HEADER_LINKS } from "@/constants"
 import { Plus, Minus } from "lucide-react"
 import { X } from "lucide-react"
 import { SiLinkedin } from "react-icons/si"
